@@ -94,25 +94,32 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
 
+                    //share data with the social applications like mail, whatsapp, facebook.
                     case "Share" :
                         intent = new Intent(Intent.ACTION_SEND);
                         intent.setType("audio/mp3");
                         startActivity(Intent.createChooser(intent,"Share using"));
                         break;
 
+                    //access the camara of the phone to capture videos or photos.
                     case "Photo/Video" :
                         intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-
                         startActivityForResult(intent,0);
                         break;
 
+                    //Comment dialog box with the rating stars.
                     case "Comments" :
 
                         LayoutInflater layoutInflaterAndroid = LayoutInflater.from(c);
+
+                        //provide custom dialog view.
                         View mView = layoutInflaterAndroid.inflate(R.layout.user_input_dialog_box, null);
                         AlertDialog.Builder alertDialogBuilderUserInput = new AlertDialog.Builder(c);
+
+                        // set view to the current context.
                         alertDialogBuilderUserInput.setView(mView);
 
+                        // set title and buttons to the dialog box.
                         final EditText userInputDialogEditText = (EditText) mView.findViewById(R.id.userInputDialog);
                         alertDialogBuilderUserInput
                                 .setCancelable(false)
@@ -129,7 +136,10 @@ public class MainActivity extends AppCompatActivity {
                                             }
                                         });
 
+                        //create dialog box.
                         AlertDialog alertDialogAndroid = alertDialogBuilderUserInput.create();
+
+                        //display dialog on current context.
                         alertDialogAndroid.show();
                         break;
                 }
