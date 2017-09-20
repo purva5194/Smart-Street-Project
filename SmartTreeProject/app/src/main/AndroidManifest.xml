@@ -43,6 +43,11 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
+
+        <intent-filter>
+            <action android:name="android.intent.ACTION_SEND" />
+        </intent-filter>
+
     </application>
 
 </manifest>

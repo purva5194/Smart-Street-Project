@@ -1,10 +1,15 @@
 package com.purvapatel.smarttreeproject;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 
 /**
@@ -34,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
             R.mipmap.nearby,
             R.mipmap.comments
     };
+
+    final Context c = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +94,44 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
 
+                    case "Share" :
+                        intent = new Intent(Intent.ACTION_SEND);
+                        intent.setType("audio/mp3");
+                        startActivity(Intent.createChooser(intent,"Share using"));
+                        break;
+
+                    case "Photo/Video" :
+                        intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+
+                        startActivityForResult(intent,0);
+                        break;
+
+                    case "Comments" :
+
+                        LayoutInflater layoutInflaterAndroid = LayoutInflater.from(c);
+                        View mView = layoutInflaterAndroid.inflate(R.layout.user_input_dialog_box, null);
+                        AlertDialog.Builder alertDialogBuilderUserInput = new AlertDialog.Builder(c);
+                        alertDialogBuilderUserInput.setView(mView);
+
+                        final EditText userInputDialogEditText = (EditText) mView.findViewById(R.id.userInputDialog);
+                        alertDialogBuilderUserInput
+                                .setCancelable(false)
+                                .setPositiveButton("Send", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialogBox, int id) {
+                                        // ToDo get user input here
+                                    }
+                                })
+
+                                .setNegativeButton("Cancel",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialogBox, int id) {
+                                                dialogBox.cancel();
+                                            }
+                                        });
+
+                        AlertDialog alertDialogAndroid = alertDialogBuilderUserInput.create();
+                        alertDialogAndroid.show();
+                        break;
                 }
 
 
