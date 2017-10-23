@@ -7,21 +7,46 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/dialogTitle"
+        android:id="@+id/comment_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/comment_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Name"
+        android:text=""
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/comment_comment_label"
+        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Comment"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/userInputDialog"
+        android:id="@+id/comment_comment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Something"
+        android:text=""
         android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_feedback"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrive comment" />
 
     <RatingBar
         android:id="@+id/ratingBar"
+        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

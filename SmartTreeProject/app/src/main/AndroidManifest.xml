@@ -42,12 +42,13 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
 
         <intent-filter>
             <action android:name="android.intent.ACTION_SEND" />
         </intent-filter>
 
+        <activity android:name=".AddUserProfileActivity"></activity>
     </application>
 
 </manifest>
