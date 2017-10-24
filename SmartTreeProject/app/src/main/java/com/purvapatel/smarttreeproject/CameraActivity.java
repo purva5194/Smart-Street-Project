@@ -19,6 +19,8 @@ public class CameraActivity extends AppCompatActivity {
 
     private static final int CAMERA_REQUEST = 1888;
 
+    private static final int VIDEO_CAPTURE = 101;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +79,8 @@ public class CameraActivity extends AppCompatActivity {
     //capture video using camera api
     public void video(View v){
 
+        Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+        startActivityForResult(intent, VIDEO_CAPTURE);
     }
 
     // when clicks on Cancel button
