@@ -26,14 +26,10 @@ public class CameraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-
     }
 
     // capture image using camera api
     public void image(View v) {
-
-        //Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-        //startActivityForResult(intent, 0);
 
         Intent cameraIntent = new Intent(
                 android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
