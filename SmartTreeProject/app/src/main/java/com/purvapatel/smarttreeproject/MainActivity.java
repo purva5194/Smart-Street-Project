@@ -121,15 +121,15 @@ public class MainActivity extends AppCompatActivity {
 
                     //share data with the social applications like mail, whatsapp, facebook.
                     case "Share" :
-                        intent = new Intent(Intent.ACTION_SEND);
-                        intent.setType("audio/mp3");
-                        startActivity(Intent.createChooser(intent,"Share using"));
+                        intent = new Intent(getApplicationContext(), ShareActivity.class);
+                        startActivity(intent);
                         break;
 
                     //access the camara of the phone to capture videos or photos.
                     case "Photo/Video" :
-                        intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                        startActivityForResult(intent,0);
+
+                        intent = new Intent(getApplicationContext(), CameraActivity.class);
+                        startActivity(intent);
                         break;
 
                     //Comment dialog box with the rating stars.

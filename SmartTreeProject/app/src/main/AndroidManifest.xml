@@ -48,7 +48,9 @@
             <action android:name="android.intent.ACTION_SEND" />
         </intent-filter>
 
-        <activity android:name=".AddUserProfileActivity"></activity>
+        <activity android:name=".AddUserProfileActivity" />
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".ShareActivity"></activity>
     </application>
 
 </manifest>
