@@ -79,6 +79,12 @@ public class CameraActivity extends AppCompatActivity {
         startActivityForResult(intent, VIDEO_CAPTURE);
     }
 
+    //capture audio using camera api
+    public void audio(View v){
+        Intent intent = new Intent(getApplicationContext(), AudioRecordingActivity.class);
+        startActivity(intent);
+    }
+
     // when clicks on Cancel button
     public void cancel(View view){
         // destroy that activity

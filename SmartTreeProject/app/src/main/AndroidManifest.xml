@@ -51,7 +51,8 @@
 
         <activity android:name=".AddUserProfileActivity" />
         <activity android:name=".CameraActivity" />
-        <activity android:name=".ShareActivity"></activity>
+        <activity android:name=".ShareActivity" />
+        <activity android:name=".AudioRecordingActivity"></activity>
     </application>
 
 </manifest>
