@@ -16,9 +16,9 @@
 3. Find Direction to destination location from current location.
 4. User Registration using business card barcode.
 5. Capture audio, video and images.
-6. Share audio, video and images using available social meadia on your device.
+6. Share audio, video and images using available social media on your device.
 
-<img src="https://user-images.githubusercontent.com/21271724/34127029-794b550a-e3f0-11e7-8043-c0bda849e2c5.PNG" width="400" height="500" />
+<img src="https://user-images.githubusercontent.com/21271724/34127380-b4f6013a-e3f1-11e7-9b87-7531a8d5fd4c.PNG" width="400" height="500" />
 
 
 <img src="https://user-images.githubusercontent.com/21271724/34126875-f61d6ad8-e3ef-11e7-8250-70eab0d4cb47.PNG" width="400" height="500" />
