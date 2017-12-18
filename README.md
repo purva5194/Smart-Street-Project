@@ -18,4 +18,12 @@
 5. Capture audio, video and images.
 6. Share audio, video and images using available social meadia on your device.
 
+<img src="https://user-images.githubusercontent.com/21271724/34127029-794b550a-e3f0-11e7-8043-c0bda849e2c5.PNG" width="400" height="500" />
+
+
+<img src="https://user-images.githubusercontent.com/21271724/34126875-f61d6ad8-e3ef-11e7-8250-70eab0d4cb47.PNG" width="400" height="500" />
+
+
+<img src="https://user-images.githubusercontent.com/21271724/34126876-f63b0ab6-e3ef-11e7-862e-f7389785c8df.PNG" width="400" height="500" />
+
 #### Video - https://youtu.be/jZLtDTjKp30
